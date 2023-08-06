@@ -43,8 +43,7 @@ host = input("\n[ "+bcolors.HEADER+" # "+bcolors.ENDC+" ] "+bcolors.BOLD+"Enter 
 # iterate over ports, from 1 to 1024
 for port in range(1, int(input("\n[ "+bcolors.HEADER+" # "+bcolors.ENDC+" ] "+bcolors.BOLD+"Range of Port: "+bcolors.ENDC))):
     if is_port_open(host, port):
-        print(bcolors.BOLD+bcolors.WARNING+f"\n[ warnning ] {host}:{port.denominator} is open", end="\r"+bcolors.ENDC)
+        print(bcolors.BOLD+bcolors.WARNING+f"\n[ warnning ] {host}:{port} is open", end="\r"+bcolors.ENDC)
     else:
         print(bcolors.BOLD+f"\n{GRAY}[ error ] {host}:{port} is closed", end="\r"+bcolors.ENDC)
-        # print("\n[ "+bcolors.FAIL+" ! "+bcolors.ENDC+" ] "+bcolors.BOLD+"Ports are Closed"+bcolors.ENDC)
-        # {RESET}", end="\r
+
